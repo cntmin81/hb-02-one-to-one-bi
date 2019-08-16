@@ -23,10 +23,14 @@ public class GetInstructorDetailDemo {
 			session.beginTransaction();
 			
 			// get the instructor detail object
+			int id = 2;
+			InstructorDetail instructorDetail = session.get(InstructorDetail.class, id);
 			
 			// print the instructor detail
+			System.out.println("instructorDetail : " + instructorDetail);
 			
 			// print the associated instructor
+			System.out.println("the associated instructor : " + instructorDetail.getInstructor());
 			
 			
 			session.getTransaction().commit();
